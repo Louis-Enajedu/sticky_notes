@@ -1,11 +1,13 @@
-{% extends 'base.html' %}
-{% block title %}{% if form.instance.pk %}Edit{% else %}New{% endif %} Note{% endblock %}
+{% extends "base.html" %}
+
+{% block title %}New Note{% endblock %}
+
 {% block content %}
-    <h2>{% if form.instance.pk %}Edit{% else %}New{% endif %} Note</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
-    </form>
-    <a href="{% url 'note_list' %}">Back to Notes</a>
+<h2>Create a new note</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+<a href="{% url 'note_list' %}">Back to list</a>
 {% endblock %}

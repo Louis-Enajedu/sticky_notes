@@ -4,11 +4,8 @@
 <h2>Notes</h2>
 <ul>
     {% for note in notes %}
-    <li>
-        <a href="{% url 'note_detail' pk=note.pk %}">{{ note.title }}</a>
-    </li>
-    {% empty %}
-    <li>No notes available.</li>
+        <li><a href="{% url 'note_detail' note.pk %}">{{ note.title }}</a></li>
     {% endfor %}
 </ul>
+<a href="{% url 'note_create' %}">Create a new note</a>
 {% endblock %}
