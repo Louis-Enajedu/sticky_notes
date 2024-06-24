@@ -1,5 +1,3 @@
-Sure, you can copy the following text and paste it directly into the README.md file on your GitHub repository:
-
 ---
 
 # Sticky Notes Application
